@@ -1,0 +1,37 @@
+###CREATE GAME MODES
+POST http://localhost:3000/modes
+Content-Type: application/json
+
+{
+  "name":"mafia",
+  "desc":"bazie mafia sadeee",
+"roles":[{"name":"mafiasade", "desc":"mafia sade","sides":"black"},{"name":"shahr","desc":"shahhhhr","sides":"white"}]
+}
+
+###GET GAME MODES
+GET http://localhost:3000/modes
+
+###Update GAME 
+PATCH http://localhost:3000/modes/656661dcc1534cf0ff3a737f
+Content-Type: application/json
+
+{
+  "name":"mafia",
+  "desc":"bazie mafia sadeee",
+"roles":[{"name":"mafiasade", "desc":"mafia sade","sides":"black"},{"name":"shahr","desc":"shahhhhr","sides":"white"},{"name":"shahr","desc":"shahhhhr","sides":"white"},{"name":"shahr","desc":"shahhhhr","sides":"white"},{"name":"shahr","desc":"shahhhhr","sides":"white"},{"name":"mafiasade", "desc":"mafia sade","sides":"black"}]
+}
+
+###Create a new game
+POST http://localhost:3000/games
+Content-Type: application/json
+
+{
+  "mode":"656661dcc1534cf0ff3a737f",
+  "players":[{"name":"alireza"},{"name":"alireza"},{"name":"alireza"},{"name":"alireza"},{"name":"alireza"}]
+}
+
+###GET a Game
+GET http://localhost:3000/games
+
+
+
